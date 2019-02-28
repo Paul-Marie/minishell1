@@ -5,7 +5,7 @@
 ** Login   <Paul-Marie@epitech.net>
 ** 
 ** Started on  Tue Jan 17 12:17:51 2017 BETTINELLI Paul-Marie
-** Last update Mon Mar 27 13:38:41 2017 BETTINELLI Paul-Marie
+
 */
 
 #include "my.h"
@@ -28,26 +28,26 @@ int	my_lines(char *str)
 
 char	**my_sort_to_wordtab(char *str)
 {
-  char	**result;
-  int	i;
-  int	d;
-  int	c;
+  char	**result = NULL;
+  int	i = 0;
+  int	d = 0;
+  size_t	c = 0;
 
-  i = 0;
-  c = 0;
   result = malloc(sizeof(char *) * (my_lines(str) + 1));
-  while (str[c] != '\0')
+  while (c < strlen(str) && str[c] != '\0')
     {
       d = 0;
       result[i] = malloc(sizeof(char) * (1024));
       while ((str[c] == ' ' || str[c] == '\t') && str[c] != '\0')
-	c = c + 1;
+	c += 1;
       while (str[c] != '\0' && str[c] != '\t' && str[c] != ';')
 	result[i][d++] = str[c++];
-      c = c + 1;
-      while ((str[c] == ' ' || str[c] == '\t') && str[c] != '\0')
-	c = c + 1;
-      i = i + 1;
+      result[i][d] = '\0';
+      c += 1;
+      while (c < strlen(str)
+	     && (str[c] == ' ' || str[c] == '\t') && str[c] != '\0')
+	c += 1;
+      i += 1;
     }
   result[i] = '\0';
   return (result);

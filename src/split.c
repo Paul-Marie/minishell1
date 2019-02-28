@@ -5,7 +5,7 @@
 ** Login   <Paul-Marie@epitech.net>
 ** 
 ** Started on  Tue Mar 14 15:34:17 2017 BETTINELLI Paul-Marie
-** Last update Sat Jul 15 09:54:26 2017 BETTINELLI Paul-Marie
+
 */
 
 #include "my.h"
@@ -15,12 +15,13 @@ extern int	g_value;
 int	check_relative(char **tab)
 {
   char	*str;
-  int	i;
-  int	d;
-  int	e;
+  int	i = 0;
+  int	d = 0;
+  int	e = 0;
 
-  i = (d = (e = 0));
   str = malloc(sizeof(char) * 128);
+  for (int j = 0; j != 128; j++)
+	  str[j] = '\0';
   str = getcwd(str, 128);
   i = my_strlen(str);
   str[i++] = '/';
