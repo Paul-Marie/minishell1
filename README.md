@@ -4,5 +4,6 @@ This is an simple basic interactive UNIX shell.
 clone the repo and run the makefile (just tap "make" on your terminal). Next, you only have to run "./mysh" for the interactive shell, or "echo "ls -l" | ./mysh for a non-tty mode.
 ### Prerequisites
 You need to be on an UNIX system (or equivalent) to run it.
-### Author
+### Authors
 * Paul-Marie Bettinelli *-initial work-*
+* Régis 'TheRegisb' Berthelot *-additional fixes-*

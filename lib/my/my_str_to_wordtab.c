@@ -5,7 +5,7 @@
 ** Login   <Paul-Marie@epitech.net>
 ** 
 ** Started on  Tue Jan 17 12:17:51 2017 BETTINELLI Paul-Marie
-** Last update Sat Jul 15 09:48:27 2017 BETTINELLI Paul-Marie
+
 */
 
 #include "my.h"
